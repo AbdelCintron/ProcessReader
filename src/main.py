@@ -1,4 +1,5 @@
 """
+Author: Abdel Cintron
 Create a program in object oriented fashion, No AI to complete code.book references are permitted. 
     Program Breakdown: 
     Purpose: Program that is able to read processes in a computer.
@@ -14,7 +15,6 @@ Create a program in object oriented fashion, No AI to complete code.book referen
             https://learn.microsoft.com/en-us/answers/questions/1114754/extract-text-from-command-prompt-window
 
 """
-
 import subprocess
 
 class ProcessReader:
@@ -22,10 +22,17 @@ class ProcessReader:
     # Run Process runs the command to the cmd
     def RunProcess():
         # Refactored Code: Added command variable
-        command = "echo Run Time: %Date% %TIME% > Process.txt & tasklist >> Process.txt"
-        Run = subprocess.run(command, shell=True, check=True)
+        Command = "echo Run Time: %Date% %TIME% > Process.txt & tasklist >> Process.txt"
+        Run = subprocess.run(Command, shell=True, check=True)
         return Run
 
+    #New Function for verifying System Information
+    def SystemInfo():
+                Command = "echo Run Time: %Date% %TIME% > SystemInfo.txt & systeminfo >> SystemInfo.txt"
+                Run = subprocess.run(Command, shell=True, check=True)
+                return Run
+
 print("Process Reader:")
+SystemInfo = ProcessReader.SystemInfo()
 RunCommand = ProcessReader.RunProcess()
 print("Process Completed")
