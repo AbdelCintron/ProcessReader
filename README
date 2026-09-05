@@ -1,0 +1,24 @@
+**System Process Logger Specification**
+
+Develop an object-oriented application to capture and archive active system processes locally.
+
+**Technical Requirements**
+
+* **Design:** Implement using Object-Oriented Programming (OOP) principles. The use of AI assistance for code generation is strictly prohibited, though reference books and documentation are permitted.
+
+* **Process Retrieval:** Query the operating system to obtain a text-based list of all currently running processes.
+
+**File System Management:**
+
+* Automatically verify the existence of or create a directory named `Logs` inside the system's `Documents` folder.
+* Export the process data into a text file named `processes`, incorporating the exact date and time of data capture into the filename.
+
+_Note: This is an ongoing project, will be adding more features over time_
+
+**Sources Used to create this project:**
+
+https://docs.python.org/3/library/subprocess.html
+
+https://learn.microsoft.com/en-us/answers/questions/1114754/extract-text-from-command-prompt-window
+
+https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands
