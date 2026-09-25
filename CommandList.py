@@ -7,23 +7,9 @@ Function Definitions and Standard Uses:
 
 import subprocess
 
-class CommandList:
+class CommandList: 
+    
     def TaskList():
         Command = "tasklist"
-        Run = subprocess.run(Command, shell=True, check=True)
-        return Run
-
-    def SystemInfo():
-        Command = "systeminfo"
-        Run = subprocess.run(Command, shell=True, check=True)
-        return Run
-
-    def IpConfig():
-        Command = "ipconfig"
-        Run = subprocess.run(Command, shell=True, check=True)
-        return Run
-
-    def Netstat():
-        Command = "netstat"
-        Run = subprocess.run(Command, shell=True, check=True)
+        Run = subprocess.run(Command, shell=True, check=True, capture_output=True, text=True)
         return Run
