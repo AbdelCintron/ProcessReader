@@ -3,7 +3,7 @@ import CommandList as cmd
 
 def GUI():
     root = tk.Tk()
-    root.title("Proceess Reader")
+    root.title("Process Reader")
 
     Command = ["Task List Command"]
 
